@@ -1,0 +1,43 @@
+﻿@model TestCoreMVC.Models.Producto
+
+@{
+    ViewData["Title"] = "BorrarProducto";
+}
+
+<h1>BorrarProducto</h1>
+
+<h3>¿Estas seguro de querer eliminar el producto?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdProd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreProd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreProd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecioProd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioProd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstadoProd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstadoProd)
+        </dd>
+    </dl>
+    
+    <form asp-action="BorrarProducto">
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="VerProducto">Back to List</a>
+    </form>
+</div>
